@@ -24,6 +24,13 @@ int Engine::Configure(const char *config_file)
 }
 
 
+int Engine::SetupExample()
+{
+	Mesh m = example_cube_mesh(2);
+	AddMesh(m, "cube");
+}
+
+
 int Engine::Run()
 {
 	window = SDL_CreateWindow(
@@ -65,4 +72,15 @@ Engine::Engine()
 Engine::~Engine()
 {
 
+}
+
+
+int Engine::AddMesh(Mesh& m, const char* name)
+{
+	/* lol */
+	int index = meshes.size();
+	meshes.push_back(m);
+	std::string s(name);
+	meshNames[s] = index;
+	return index;
 }

@@ -9,6 +9,8 @@
 #define ENGINE_H_
 
 #include <SDL2/SDL.h>
+#include <map>
+#include <string>
 #include "Mesh.h"
 
 class Engine {
@@ -27,6 +29,9 @@ private:
 	float horizontal_fov;
 
 	std::vector<Mesh> meshes;
+	std::map<std::string, unsigned int> meshNames;
+
+	int AddMesh(Mesh& m, const char *name);
 };
 
 #endif /* ENGINE_H_ */

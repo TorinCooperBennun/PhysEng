@@ -20,9 +20,9 @@ public:
 	int Colours(std::vector<float>& new_colours);
 
 private:
-	std::vector<float>& vertices;
-	std::vector<float>& indices;
-	std::vector<float>& colours;
+	std::vector<float> vertices;
+	std::vector<float> indices;
+	std::vector<float> colours;
 };
 
 Mesh example_cube_mesh(float dimension);
