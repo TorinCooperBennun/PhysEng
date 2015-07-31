@@ -22,6 +22,8 @@ public:
 	int SetupExample();
 	int Run();
 
+
+
 private:
 	SDL_Window *window;
 	SDL_GLContext context;

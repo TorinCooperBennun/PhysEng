@@ -28,6 +28,8 @@ int Engine::SetupExample()
 {
 	Mesh m = example_cube_mesh(2);
 	AddMesh(m, "cube");
+
+	return 0;
 }
 
 
@@ -63,7 +65,7 @@ int Engine::Run()
 
 
 Engine::Engine()
-:window(NULL), context(NULL), window_width(1280), window_height(720), horizontal_fov(60)
+:window(NULL), context(NULL), window_height(720), window_width(1280), horizontal_fov(60)
 {
 
 }
